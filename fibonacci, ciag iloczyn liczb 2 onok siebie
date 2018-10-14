@@ -1,0 +1,44 @@
+#include <iostream>
+#include<cstdlib>
+using namespace std;
+
+float x;
+int pierw = 1;
+int drugi = 1; 
+int c=0;
+int m;
+int nie;
+ 
+int main() {
+	cin >> x;
+	if (x > 0 && x - int(x) == 0) {
+		int Fibonnaci[10000];
+		for (c; pierw <= x; c++) {
+			Fibonnaci[c] = pierw;
+			drugi += pierw;
+			pierw = drugi - pierw;
+
+		}
+		for (m=0; m < c;m++) {
+			for (int n = 1; n < c; n++) {
+				if (Fibonnaci[m] * Fibonnaci[n] ==x) {
+					cout << "Tak";
+					nie = 1;
+					system("pause");
+					break;
+					 
+					
+				}
+			}
+		}
+
+		if (nie != 1) { cout << "Nie";
+		system("pause");
+		}
+	}
+	else {
+		cout << "Nie jest naturalnym ";
+		system("pause");
+
+	}
+ }
