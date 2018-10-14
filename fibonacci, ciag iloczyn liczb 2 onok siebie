@@ -20,7 +20,7 @@ int main() {
 
 		}
 		for (m=0; m < c;m++) {
-			for (int n = 1; n < c; n++) {
+			for (int n =n+ 1; n < c; n++) {
 				if (Fibonnaci[m] * Fibonnaci[n] ==x) {
 					cout << "Tak";
 					nie = 1;
