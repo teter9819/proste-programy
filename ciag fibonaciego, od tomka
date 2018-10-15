@@ -1,0 +1,42 @@
+#include "pch.h"
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a = 1;
+	int b = 1;
+	int c = 0;
+	int d = 1;
+	int e = 1;
+	int f = 0;
+	int x = 0;
+	bool czy_prawda = false;
+	cin >> x;
+	if (x == 1) {
+		cout << "TAK";
+	}
+	else {
+		while ((c < x)&&(czy_prawda = false))
+		{
+			c = a + b;
+			while ((f < x)&&(czy_prawda=false))
+			{
+				f = d + e;
+				cout << c<<"\n";
+				cout << f;
+				if ((f*c == x)&&(f!=c)) {
+					cout << "TAK";
+					czy_prawda = true;
+				}
+				d = e;
+				e = f;
+			}
+			a = b;
+			b = c;
+		}
+		if (czy_prawda == false) {
+			cout << "NIE";
+		}
+	}
+}
